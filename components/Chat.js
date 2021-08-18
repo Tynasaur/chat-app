@@ -1,27 +1,27 @@
 import React from "react";
-import { View, Text, Button, TextInput, ImageBackground } from "react-native";
+import { View, Text, Button, TextInput } from "react-native";
 
-//         <Text>You wrote: {this.state.text}</Text>
 
 export default class Chat extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
+      username: "",
     };
   }
 
   render() {
-    let { name } = this.props.route.params;
-    //thsi is showing an error
-    this.props.navigation.setOptions({ title: "Hi " + name + "!"});
+    let { username } = this.props.route.params;
+    //this is showing an error
+    this.props.navigation.setOptions({ title: username });
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Hi {name}</Text>
+
+        <Text>Hi {username}</Text>
         <TextInput
           style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
-          onChangeText={(name) => this.setState({ name })}
-          value={this.state.name}
+          onChangeText={(username) => this.setState({ username })}
+          value={this.state.username}
           placeholder="Type here ..."
         />
 
