@@ -13,7 +13,7 @@ export default class Start extends React.Component {
     super(props);
     this.state = {
       username: "",
-      bgColor: "violet",
+      bgColor: "#757083",
     };
   }
   render() {
@@ -53,6 +53,7 @@ export default class Start extends React.Component {
               />
             </View>
             <TouchableOpacity
+            //navigates to Chat.js
               onPress={() =>
                 this.props.navigation.navigate("Chat", {
                   username: this.state.username,
@@ -62,6 +63,7 @@ export default class Start extends React.Component {
               accessible={true}
               accessibilityLabel="Start Chat"
               accessibilityRole="button"
+              accessibilityHint="Navigates to the chat screen"
             >
               <Text style={styles.startButton}>Start chatting</Text>
             </TouchableOpacity>
