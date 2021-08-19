@@ -53,7 +53,7 @@ export default class Start extends React.Component {
               />
             </View>
             <TouchableOpacity
-            //navigates to Chat.js
+              //navigates to Chat.js
               onPress={() =>
                 this.props.navigation.navigate("Chat", {
                   username: this.state.username,

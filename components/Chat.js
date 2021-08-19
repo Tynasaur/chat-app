@@ -16,7 +16,7 @@ export default class Chat extends React.Component {
     this.state = {
       username: "",
       messages: [],
-      bgColor: this.props.route.params.bgColor
+      bgColor: this.props.route.params.bgColor,
     };
   }
 
@@ -66,7 +66,7 @@ export default class Chat extends React.Component {
     let { username } = this.props.route.params;
     //this is showing an error
     // this.props.navigation.setOptions({ title: username });
-  
+
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <Text>Hi {username}</Text>
