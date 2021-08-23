@@ -9,6 +9,11 @@ import {
 } from "react-native";
 import { GiftedChat, Bubble } from "react-native-gifted-chat";
 
+const firebase = require("firebase");
+require("firebase/firestore");
+
+
+
 export default class Chat extends React.Component {
   constructor(props) {
     super(props);
@@ -17,9 +22,28 @@ export default class Chat extends React.Component {
       username: "",
       messages: [],
       bgColor: this.props.route.params.bgColor,
+      uid: 0,
+      LoggedInText: "Please wait, you are being logged in"
     };
+
+//connects firebase database
+if (!firebase.apps.length) {
+  firebase.initializeApp({
+    apiKey: "AIzaSyBnEL8Av2Ge_Jt33CGLAjY7UKrGTGCgBMw",
+    authDomain: "chat-app-8d9a9.firebaseapp.com",
+    projectId: "chat-app-8d9a9",
+    storageBucket: "chat-app-8d9a9.appspot.com",
+    messagingSenderId: "511831772136",
+  });
+  //specifies which collection is being referred to (messages)
+  this.referenceChatMessages = firebase;
+firebase.firestore().collection("messages");
+}
+
   }
 
+
+  
   componentDidMount() {
     this.setState({
       messages: [
@@ -42,6 +66,29 @@ export default class Chat extends React.Component {
       ],
     });
   }
+
+  onCollectionUpdate = (querySnapshot) => {
+    const messages = [];
+    // go through each document
+    querySnapshot.forEach((doc) => {
+      // get the QueryDocumentSnapshot's data
+      let data = doc.data();
+      messages.push({
+        //do I need to change name to _id?
+        name: data.name,
+        text: data.text.toString(),
+        createdAt: data.createdAt.toDate(),
+        user: data.user,
+        image: data.image || null,
+      });
+    });
+    this.setState({
+      messages,
+    });
+  };
+
+
+
 
   //called when a user sends a message
   onSend(messages = []) {
