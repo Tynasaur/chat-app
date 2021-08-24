@@ -38,35 +38,34 @@ export default class Start extends React.Component {
               <TouchableOpacity
                 style={styles.colorSelection1}
                 onPress={() => this.setState({ bgColor: "#090C08" })}
-                accessible={true}
-                accessibilityLabel="background color"
-                accessibilityRole="background color option 1"
-                accessibilityHint="Changes chat screen color"
+                // accessible={true}
+                // accessibilityLabel="background color"
+                // accessibilityRole="background color option 1"
+                // accessibilityHint="Changes chat screen color"
               />
               <TouchableOpacity
                 style={styles.colorSelection2}
                 onPress={() => this.setState({ bgColor: "#474056" })}
-                accessible={true}
-                accessibilityLabel="background color"
-                accessibilityRole="background color option 2"
-                accessibilityHint="Changes chat screen color"
-                
+                // accessible={true}
+                // accessibilityLabel="background color"
+                // accessibilityRole="background color option 2"
+                // accessibilityHint="Changes chat screen color"
               />
               <TouchableOpacity
                 style={styles.colorSelection3}
                 onPress={() => this.setState({ bgColor: "#8A95A5" })}
-                accessible={true}
-                accessibilityLabel="background color"
-                accessibilityRole="background color option 3"
-                accessibilityHint="Changes chat screen color"
+                // accessible={true}
+                // accessibilityLabel="background color"
+                // accessibilityRole="background color option 3"
+                // accessibilityHint="Changes chat screen color"
               />
               <TouchableOpacity
                 style={styles.colorSelection4}
                 onPress={() => this.setState({ bgColor: "#B9C6AE" })}
-                accessible={true}
-                accessibilityLabel="background color"
-                accessibilityRole="background color option 4"
-                accessibilityHint="Changes chat screen color"
+                // accessible={true}
+                // accessibilityLabel="background color"
+                // accessibilityRole="background color option 4"
+                // accessibilityHint="Changes chat screen color"
               />
             </View>
             <TouchableOpacity
