@@ -128,6 +128,7 @@ export default class Chat extends React.Component {
       () => {
         // Call function to save to local storage
         this.saveMessages();
+        this.addMessages();
       }
     );
   }
