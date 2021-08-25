@@ -37,35 +37,23 @@ export default class Start extends React.Component {
             <View style={styles.bgColorOptions}>
               <TouchableOpacity
                 style={styles.colorSelection1}
-                onPress={() => this.setState({ bgColor: "#090C08" })}
-                // accessible={true}
-                // accessibilityLabel="background color"
-                // accessibilityRole="background color option 1"
-                // accessibilityHint="Changes chat screen color"
+                onPress={() => this.setState({ bgColor: "#161213" })}
+                accessible={false}
               />
               <TouchableOpacity
                 style={styles.colorSelection2}
                 onPress={() => this.setState({ bgColor: "#474056" })}
-                // accessible={true}
-                // accessibilityLabel="background color"
-                // accessibilityRole="background color option 2"
-                // accessibilityHint="Changes chat screen color"
+                accessible={false}
               />
               <TouchableOpacity
                 style={styles.colorSelection3}
                 onPress={() => this.setState({ bgColor: "#8A95A5" })}
-                // accessible={true}
-                // accessibilityLabel="background color"
-                // accessibilityRole="background color option 3"
-                // accessibilityHint="Changes chat screen color"
+                accessible={false}
               />
               <TouchableOpacity
                 style={styles.colorSelection4}
                 onPress={() => this.setState({ bgColor: "#B9C6AE" })}
-                // accessible={true}
-                // accessibilityLabel="background color"
-                // accessibilityRole="background color option 4"
-                // accessibilityHint="Changes chat screen color"
+                accessible={false}
               />
             </View>
             <TouchableOpacity
@@ -152,7 +140,7 @@ const styles = StyleSheet.create({
   },
 
   colorSelection1: {
-    backgroundColor: "#090C08",
+    backgroundColor: "#161213",
     width: 50,
     height: 50,
     borderRadius: 25,
