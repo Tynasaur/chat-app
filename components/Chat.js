@@ -33,7 +33,7 @@ export default class Chat extends React.Component {
     };
     if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
-      //specifies which collection is being referred to (messages)
+      //specifies which collection is being referred to
       this.referenceChatMessages = firebase.firestore().collection("messages");
       firebase.firestore().collection("messages");
       this.referenceMessageUser = null;
@@ -139,6 +139,18 @@ export default class Chat extends React.Component {
         "messages",
         JSON.stringify(this.state.messages)
       );
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  // Deletes any stored messages
+  async deleteMessages() {
+    try {
+      await AsyncStorage.removeItem("messages");
+      this.setState({
+        messages: [],
+      });
     } catch (error) {
       console.log(error.message);
     }
