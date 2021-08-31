@@ -29,12 +29,28 @@ and location data.
 
 * Node.js
 * Expo Command Line Interface
-....npm install --global expo-cli
+```
+npm install --global expo-cli
+```
 * Expo account
-* Expo Go - to run on 
+* To run the app on your machine via a simulator/emulator:
+ 
+ 
+   * [Android Studio](https://docs.expo.dev/workflow/android-studio-emulator/)
+ 
+ 
+    * [iOS Simulator](https://docs.expo.dev/workflow/android-studio-emulator/)(Mac iOS only) 
 
 ## How to get the project running
 
-*
+Start by cloning this repository and installing dependencies
+```
+npm install
+```
+To start up app run in root folder
+```
+expo start
+```
+
 
 
