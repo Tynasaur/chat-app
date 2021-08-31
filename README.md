@@ -16,18 +16,25 @@ before joining the chat.
 and location data.
 * Data gets stored online and offline
 
+## Tools Used
 
-## How to get the project running
-
-*
+* React Native
+* Expo
+* Android Studio
+* Gifted Chat
+* Google Firestore Database
+* Node.js
 
 ## Project dependencies 
 
 * Node.js
-* Expo
-* Firestone (database)
+* Expo Command Line Interface
+....npm install --global expo-cli
+* Expo account
+* Expo Go - to run on 
 
+## How to get the project running
 
-
+*
 
 
