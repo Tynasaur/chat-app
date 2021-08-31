@@ -9,6 +9,9 @@ import MapView from "react-native-maps";
 import firebase from "firebase";
 import "firebase/firestore";
 
+import { LogBox } from "react-native";
+LogBox.ignoreAllLogs();
+
 export default class CustomActions extends React.Component {
   // Creates and ActionSheet to display available actions
 
@@ -81,12 +84,10 @@ export default class CustomActions extends React.Component {
     }
   };
 
-  // Function to get Location
+  //Get Location
   getLocation = async () => {
     try {
-      const { status } = await Permissions.askAsync(
-        Permissions.LOCATION_BACKGROUND
-      );
+      const { status } = await Permissions.askAsync(Permissions.LOCATION);
       if (status === "granted") {
         const result = await Location.getCurrentPositionAsync({}).catch(
           (error) => console.log(error)

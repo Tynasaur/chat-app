@@ -113,8 +113,8 @@ export default class Chat extends React.Component {
             },
             messages: [],
             location: {
-              longitude: 11.5249684,
-              latitude: 48.0643933,
+              latitude: 48.864601,
+              longitude: 2.398704,
             },
           });
           this.unsubscribe = this.referenceChatMessages
@@ -131,7 +131,6 @@ export default class Chat extends React.Component {
 
   componentWillUnmount() {
     this.authUnsubscribe();
-    this.referenceChatMessages = () => {};
   }
 
   onCollectionUpdate = (querySnapshot) => {
