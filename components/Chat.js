@@ -199,12 +199,12 @@ export default class Chat extends React.Component {
     if (currentMessage.location) {
       return (
         <MapView
-          style={{ width: 150, height: 100, borderRadius: 13, margin: 3 }}
+          style={{ width: 250, height: 150, borderRadius: 15, margin: 3 }}
           region={{
             latitude: currentMessage.location.latitude,
             longitude: currentMessage.location.longitude,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
+            latitudeDelta: 0.3,
+            longitudeDelta: 0.04,
           }}
         />
       );
